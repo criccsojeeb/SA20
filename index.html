@@ -89,57 +89,58 @@ if(!localStorage.getItem("tg_skip")){
 
 /* ========== ADMIN PANEL (CHANNEL LIST) ========== */
 const CHANNELS = {
-  criclife: {
-    name:"CricLife",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=303627"
-  },
-  cricbuzz: {
-    name:"Cricbuzz",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=303629"
-  },
-  willow: {
-    name:"Willow",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=13141"
-  },
-  willow2: {
-    name:"Willow 2",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=282231"
-  },
-  sky: {
-    name:"Sky Sports",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=10527"
-  },
-  tnt: {
-    name:"TNT Sports",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=77413"
-  },
-  fox: {
-    name:"Fox Sports",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=197185"
-  },
-  star: {
-    name:"Star Sports",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=276736"
-  },
-  sony: {
-    name:"Sony Sports",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=276737"
-  },
-  zee: {
-    name:"Zee Cinema",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=276907"
-  },
-  geo: {
-    name:"Geo Super",
-    url:"https://allinonereborn.xyz/mix.m3u8/live4.php?id=49242"
-  },
-  fancode: {
-    name:"FanCode",
-    url:"https://bd-mc-fdlive.fancode.com/mumbai/138656_english_hls_ce83ff130b39556_1ta-di_h264/index.m3u8"
-  },
-  fancode2:"https://bd-mc-fdlive.fancode.com/mumbai/131003_english_hls_ae70ea1be669377_1ta-di_h264/index.m3u8"
-};
 
+  fox: {
+    name: "Live 1",
+    url: "https://allinonereborn.xyz/push4k/live.php?id=24016"
+  },
+
+  skymain: {
+    name: "Live 2",
+    url: "https://allinonereborn.xyz/push4k/live.php?id=23945"
+  },
+
+  sky: {
+    name: "Live 3",
+    url: "https://allinonereborn.xyz/push4k/live.php?id=25318"
+  },
+
+  star2: {
+    name: "Live 4",
+    url: "https://allinonereborn.xyz/push4k/live.php?id=7455"
+  },
+
+  willow: {
+    name: "Live 5",
+    url: "https://allinonereborn.xyz/push4k/live.php?id=15521"
+  },
+
+  live6: {
+    name: "Live 6",
+    url: "https://allinonereborn.xyz/mix.m3u8/live2.php?id=10527"
+  },
+
+  live7: {
+    name: "Live 7",
+    url: "https://allinonereborn.xyz/mix.m3u8/live2.php?id=77413"
+  },
+
+  live8: {
+    name: "Live 8",
+    url: "https://allinonereborn.xyz/mix.m3u8/live2.php?id=197185"
+  },
+
+  live9: {
+    name: "Live 9",
+    url: "https://allinonereborn.xyz/mix.m3u8/live2.php?id=276736"
+  },
+
+  live10: {
+    name: "Live 10",
+    url: "https://allinonereborn.xyz/mix.m3u8/live2.php?id=276737"
+  }
+
+};
 /* ========== STREAM SELECTOR ========== */
 const params = new URLSearchParams(window.location.search);
 const ch = params.get("ch");
@@ -153,7 +154,7 @@ const source = CHANNELS[ch].url;
 const video = document.getElementById("player");
 
 // ▶️ HLS Player
-if(Hls.isSupported()){
+live2ve2ve2(Hls.isSupported()){
   const hls = new Hls({autoStartLoad:true});
   hls.loadSource(source);
   hls.attachMedia(video);
@@ -174,5 +175,6 @@ new Plyr(video,{
 
 </body>
 </html>
+
 
 
